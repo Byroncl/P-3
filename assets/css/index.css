@@ -1,0 +1,196 @@
+/* código general para quitar bordes, espacios y establecer el tipo y tamaño de fuente*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+/*codigo para estetica géneral/responsiva*/
+
+/* Clase padre */
+.padre{
+    background: url(../image/hero.png); /*Fondo superior del hero*/
+        background-position: center; /* Centrar posición del box .top*/
+        background-attachment: contain;
+        background-size: cover;
+
+    display: flex; /*Establecer la propiedad flex en todas las demás box heredadas*/
+    flex-flow: column nowrap;
+}
+/* Extra de margenes*/
+.margen{
+    padding: 0 50px;
+}
+
+/* Código superior de la página */
+    .top{
+        display: flex;
+        flex-flow: column nowrap; /*establecer la barra y el hero como columnas*/
+    }
+        /* Coso de barra-variables */
+        .barra{
+            background-color: rgba(0, 0, 0, 0.441);
+            display: flex;
+            flex-flow: row nowrap; /*establecer las variables de la barra para que no se formen columnas*/
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5); /*color de borde de barra*/
+
+            height: 60px; /*establecer tamaño*/
+
+            align-items: center;
+            justify-content: center;
+        }
+            .barra-contenido{
+                /* flex: 1 1 auto; establecer la distribución de la variable */
+                display: flex;
+                padding: 0 10px;
+                letter-spacing: 2px; /*establecer el espacio*/    
+            }
+                .barra-contenido h1{ /*propiedad para que la variable cambie al pasar el cursor*/
+                    color: #fff;
+                }
+                
+/* Código principal de la página */
+.mid{
+    display: flex;
+    justify-content: center; /*centrar contenido*/
+    align-items: center; /* alinear contenido*/
+    
+    
+
+} 
+    .section-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* alinear contenido*/
+        justify-content: center; /*centrar contenido*/
+    }
+            
+            label {
+                margin-top: 30px;
+                font-size: 20px;
+            }
+            
+            input{
+                margin-bottom: 0px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 20px;
+                font-size: 16px;
+                
+            }
+            
+            .button {
+                margin-top: 30px;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 20px;
+                font-size: 16px;
+                background-color: #162385;
+                color: white;
+                cursor: pointer;
+            }
+            
+            button:hover {
+                background-color: #EA5455;
+            }   
+/* Código inferior de la página */
+    .bottom{
+        display: flex;
+        justify-content: center; /*centrar contenido*/
+    }
+        .texto-final{
+            text-align: center; /*alinear texto*/
+        }
+
+/* codigo Extra */
+
+/*titulo colores, tamaño, ubicación, etc*/
+.titulo{
+    font-size: 25px;
+    margin-top: 100px;
+    background-color: rgb(106, 0, 255);
+    border-radius: 20px;
+    width: 400px;
+    text-align: center;
+}
+/*tamaño y colores de los input*/
+input{
+    width: 400px;
+    background-color: rgba(129, 7, 114, 0.271);
+    border-radius: 20px;
+    text-align: center;
+}
+/*Ubicar las cajas por distacia de espacios*/
+.button, .bottom{
+    margin-top: 50px;
+}
+.bottom{
+    margin-top: 200px;
+}
+
+/*colores de la caja de resuktadis*/
+.resultado{
+    background-color: rgba(255, 128, 0, 0.455);
+    text-align: center;
+    border-radius: 20px;
+}
+
+/*colores de las fuentes*/
+.h2{
+
+    background-color: rgba(255, 0, 0, 0.646);
+    border-radius: 20px;
+}
+.h2, .resultado{
+    margin-top: 20px;
+}
+input{
+    color: #fff;
+}
+.texto-final a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* código Responsivo */
+
+/*establecer cambios de código cuando la pantalla tiene un ancho de 948px*/
+@media all and(max-width:948px) {
+    .mid{
+        flex-direction: column;
+    }
+    .barra{
+        flex-direction: column;
+        height: auto;
+    }
+    .section-1{
+        display: flex;
+        justify-content: center;
+    }
+    .barra-principal_1{
+        font-size: 15px;
+    }
+}
+/*establecer cambios de código cuando la pantalla tiene un ancho de 600px*/
+@media all and(max-width:600px) {
+    .section-1{
+        flex-direction: column;
+    }
+    .barra{
+        flex-direction: column;
+        height: auto;
+    }
+}
+/*establecer cambios de código cuando la pantalla tiene un ancho de 400px*/
+@media all and(max-width:400px) {
+    .section-1{
+        flex-direction: column;
+    }
+    .barra{
+        flex-direction: column;
+        height: auto;
+    }
+}
